@@ -31,5 +31,5 @@ Feel free to PR your own example!
 
 ## 2. Prototype of an experiment with multiple variability levels
 
-TODO
+See the xp_sort directory.
 
