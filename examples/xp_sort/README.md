@@ -1,5 +1,4 @@
-# Experiment : What is the fastest algorithm to sort an array and how to evaluate the difference of sorting time between distinct algorithms?
-
+# Experiment : Sorting arrays
 
 ## Motivation
 
@@ -14,7 +13,7 @@ If you find a 18% gain of energy (instead of the original 20%), one could consid
 But what about a frank difference between your results and theirs - let's say a difference of ten points, or worse, a difference so big like more than 20 points, implying that the proposed approach actually consumes more than the SOTA's? 
 Who owns the truth; you, the original authors, no one or both?
 
-Even if you carefully follow the experimental protocol proposed by the authors, at some point you probably filled in the missing information when it was not provided, trying to leave as few changes as possible compared to the original work, but still changing some hidden parts of the environment.
+Even if you carefully followed the experimental protocol proposed by the authors, at some point you probably filled in the missing information when it was not provided, trying to leave as few changes as possible compared to the original work, but still changing some hidden elements of the environment.
 Some changes are listed in the following figure, and could be located in different layers of the executing environment (operating system or hardware platforms used, language chosen, etc.).
 
 ![deep_var](../../figures/figure_deep_var.png)
@@ -32,7 +31,12 @@ In practice, it is a simple experience comparing the execution time of three sim
 Although they have different complexities, all these algorithms perform the same simple task defined as follows:
 
 ```
-Given an array (e.g. [5,1,3,4,2]), the algorithm is supposed to return an array with the same elements, but ordered in an increasing manner (e.g. [1,2,3,4,5])
+Given an array 
+(e.g. [5,1,3,4,2]), 
+the algorithm is supposed to return an array 
+with the same elements, 
+but ordered in an increasing manner 
+(e.g. [1,2,3,4,5])
 ```
 
 ### Environment changes
@@ -40,8 +44,8 @@ Given an array (e.g. [5,1,3,4,2]), the algorithm is supposed to return an array 
 The tricky part is that we artificially create multiple points of variability, by launching it with different setups of environments.
 
 Following the order of the figure 2 (see above), we vary:
-- [Protocol] the number of repetitions
-- [Input Data] the length of the input array e.g. 10, 100, 1k, 10k, 1M,  elements
+- [Protocol] the number of repetitions, e.g. 1, 5, 10 repetitions
+- [Input Data] the length of the input array e.g. 10, 100, 1k, 10k, 1M elements
 - [Input Data] the type of elements e.g. float or int
 - [Language] the language used to implement the three algorithms, e.g. C, python, java,
 - [Library] the version of docker
