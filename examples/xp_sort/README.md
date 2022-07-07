@@ -45,6 +45,7 @@ The tricky part is that we artificially create multiple points of variability, b
 
 Following the order of the figure 2 (see above), we vary:
 - [Protocol] the number of repetitions, e.g. 1, 5, 10 repetitions
+- [Input Data] is the array already sorted e.g. best case vs worst case
 - [Input Data] the length of the input array e.g. 10, 100, 1k, 10k, 1M elements
 - [Input Data] the type of elements e.g. float or int
 - [Language] the language used to implement the three algorithms, e.g. C, python, java,
