@@ -1,5 +1,7 @@
 # Python3 implementation of QuickSort 
  
+import sys
+from load import load_input
  
 # Function to find the partition position
 def partition(array, low, high):
@@ -43,11 +45,8 @@ def quick_sort(array, low, high):
     quick_sort(array, pi + 1, high)
  
    
-         
-# Driver code
-array = [ 10, 7, 8, 9, 1, 5]
-quick_sort(array, 0, len(array) - 1)
- 
-print(f'Sorted array: {array}')
+if __name__ == '__main__':
+    arr = load_input(sys.argv[1])
+    quick_sort(arr, 0, len(arr) - 1)
      
 # This code is contributed by Adnan Aliakbar

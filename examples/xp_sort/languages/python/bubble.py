@@ -1,3 +1,7 @@
+
+import sys
+from load import load_input
+
 # Python3 Optimized implementation
 # of Bubble sort
   
@@ -25,14 +29,9 @@ def bubbleSort(arr):
         # by inner loop, then break
         if swapped == False:
             break
-           
-# Driver code to test above
-arr = [64, 34, 25, 12, 22, 11, 90]
-   
-bubbleSort(arr)
-   
-print ("Sorted array :")
-for i in range(len(arr)):
-    print ("%d" %arr[i],end=" ")
+
+if __name__ == '__main__':
+    arr = load_input(sys.argv[1])
+    bubbleSort(arr)
   
 # This code is contributed by Shreyanshi Arun
